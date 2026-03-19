@@ -142,27 +142,22 @@ nav { position: relative; }
 .headerp {
   width: 100%;
   overflow: hidden;
-  position: relative;
-  margin-top: -0.3vw;
   padding-bottom: 0.4vw;
-  animation-name: myAnimation;
-  animation-duration: 60s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes myAnimation {
-  0%   { left: 0px; top: 0px; }
-  100% { left: 100%; top: 0px; }
+  white-space: nowrap;
 }
 
 .scrolling-p {
   white-space: nowrap;
-  margin-left: -100%;
   font-size: 1.5vw;
   word-spacing: 10vw;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
+  display: inline-block;
+  animation: myAnimation 120s linear infinite;
+}
+
+@keyframes myAnimation {
+  0%   { transform: translateX(calc(100vw - 100%)); }
+  100% { transform: translateX(200vw); }
 }
 
 li {
@@ -349,7 +344,10 @@ footer h1 {
   background-size: cover;
   padding-top: 6vw;
   padding-bottom: 6vw;
-  line-height: 4vw;
+  line-height: 3vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .contact-wrapper {
@@ -357,7 +355,7 @@ footer h1 {
   flex-direction: column;
   align-items: flex-start;
   margin-left: 4vw;
-  max-width: 40%;
+  width: 45%;
 }
 
 #section4p {
@@ -502,8 +500,8 @@ footer h1 {
   header h1 { font-size: 3.5vw; margin-top: 0; }
   .header-inner { padding: 0 3vw; }
   .nav-links a { font-size: 3.5vw; }
-  .scrolling-p { font-size: 3vw; word-spacing: 5vw; margin-left: 0; }
-  .headerp { margin-top: 0; animation: none; }
+  .scrolling-p { font-size: 3vw; word-spacing: 5vw; }
+  .headerp { margin-top: 0; }
 
   .parallax { min-height: 80vw; padding-top: 25vw; padding-bottom: 20vw; }
   #section1p { font-size: 10vw; line-height: normal; }
