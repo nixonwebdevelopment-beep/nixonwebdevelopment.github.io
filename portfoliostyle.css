@@ -25,7 +25,7 @@ html {
 
 .section1button {
   font-size: 2.2vw;
-  xbackground-image: url( buttonflower.jfif);
+  xbackground-image: url("buttonflower.jfif");
   background-size: cover;
   background-color: black;
   color: white;
@@ -118,7 +118,7 @@ html {
 }
 
 .section3 {
-  background-image: url( background3.jpg);
+  background-image: url("background3.jpg");
   background-attachment: fixed;
   background-size: cover;
   padding-top: 4vw;
@@ -131,7 +131,7 @@ html {
   margin-right: 0;
 }
 .section4 {
-  background-image: url( socialmediabackground.jpg);
+  background-image: url(socialmediabackground.jpg);
   background-attachment: fixed;
   background-size: cover;
   padding-top: 6vw;
