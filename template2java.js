@@ -60,7 +60,6 @@ function splitHeading() {
 function resetAll() {
   clearTimers();
   document.querySelectorAll('.letter').forEach(l => l.classList.remove('visible'));
-  document.getElementById('accentLine').classList.remove('visible');
   document.querySelectorAll('.animate-on-scroll').forEach(el => el.classList.remove('visible'));
 }
 
@@ -69,9 +68,6 @@ function playAnimation() {
   requestAnimationFrame(() => {
     document.querySelectorAll('.letter').forEach(l => l.classList.add('visible'));
   });
-  timers.push(setTimeout(() => {
-    document.getElementById('accentLine').classList.add('visible');
-  }, 700));
   const p2Span = document.querySelector('.p2 .animate-on-scroll');
   if (p2Span) timers.push(setTimeout(() => p2Span.classList.add('visible'), 950));
 }
