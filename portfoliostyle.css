@@ -437,11 +437,32 @@ footer h1 {
   margin-left: 3.9vw;
 }
 
-.animate-on-scroll span {
+.letter {
+  display: inline-block;
   opacity: 0;
-  transition: opacity 0.8s ease-in-out;
+  transform: translateY(50px) rotateX(90deg);
+  transform-origin: bottom center;
+  transition: opacity 0.5s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-.animate-on-scroll.active span { opacity: 1; }
+
+.letter.visible {
+  opacity: 1;
+  transform: translateY(0) rotateX(0deg);
+}
+
+.animate-on-scroll {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 .fade-in-image {
   opacity: 0;
