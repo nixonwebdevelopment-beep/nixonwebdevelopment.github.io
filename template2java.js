@@ -16,12 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // ── Scroll progress bar ──────────────────────────────────────
-  window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.body.scrollHeight - window.innerHeight;
-    const progress = (scrollTop / docHeight) * 100;
-    document.getElementById('progress-bar').style.width = progress + '%';
-  });
+ window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / docHeight) * 100;
+  document.getElementById('progress-bar').style.height = progress + '%';
+});
 
   // ── General fade-in observer ─────────────────────────────────
   const fadeElements = document.querySelectorAll(".fade-in-image");
